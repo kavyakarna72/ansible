@@ -6,13 +6,13 @@
     DURATION: 120HRS
     TRAINER: Kavya
   tasks:
-  - name: print the variables
+  - name: print the variables (with task-level override)
     vars: # task level variables
-      COURSE: Ansible
+      COURSE: "Ansible" # override the play-level variable
     ansible.builtin.debug:
       msg: "course is {{ COURSE}}, Duration is {{ DURATION}}, Trainer is {{ TRAINER}}"
 
-  - name: print the variables
+  - name: print the variables (no override)
     ansible.builtin.debug:
     msg: "course is {{ COURSE}}, Duration is {{ DURATION}}, Trainer is {{ TRAINER}}"
     
