@@ -2,7 +2,7 @@
   hosts: local
   connection: local 
   vars-files: 
-  - variable.yaml # correct indentation for vars_files
+  - variable.yaml #  Correct key for vars_files (plural)
   tasks:
   - name: print variable information
     ansible.builtin.debug:
