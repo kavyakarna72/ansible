@@ -5,7 +5,7 @@
     - name: install nginx 
       ansible.builtin.package:
         name: nginx
-        state: presant
+        state: presant # current the typo here
     - name: start the nginx
       ansible.builtin.service:
        name: nginx
