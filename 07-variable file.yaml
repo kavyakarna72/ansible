@@ -2,8 +2,8 @@
   hosts: local
   connection: local 
   vars-files: 
-  - variable.yaml
+  - variable.yaml # correct indentation for vars_files
   tasks:
   - name: print variable information
     ansible.builtin.debug:
-      msg: "course is{{ COURSE}}, Duration is{{ DURATION}}, Trainer is {{ TRAINER}}"
+      msg: "course is {{ COURSE}}, Duration is {{ DURATION}}, Trainer is {{ TRAINER}}"
