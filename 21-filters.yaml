@@ -37,3 +37,14 @@
       ansible.builtin.debug:
         msg: "HELLO {{ name | lower }}" 
   
+    - name: convert lower to upper
+      vars:
+       name: "KAVYA reddy K"
+      ansible.builtin.debug:
+        msg: "HELLO {{ name | upper }}" 
+
+    - name: print min and max
+      vars:
+        numbers: [1,30,38,36,87,8888,999,000,643679,]
+      ansible.builtin.debug:
+        msg: "Min is: {{ numbers | min }} max is: {{ numbers | max }}"      
