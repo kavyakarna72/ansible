@@ -1,6 +1,6 @@
 - name: shell vs command
   hosts: local 
-  connections: local
+  connection: local
   tasks: 
   - name: execute is command
     ansible.builtin.shell: is -ltr > /temp/output.txt 
