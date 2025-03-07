@@ -48,3 +48,10 @@
         numbers: [1,30,38,36,87,8888,999,000,643679,]
       ansible.builtin.debug:
         msg: "Min is: {{ numbers | min }} max is: {{ numbers | max }}"      
+
+    - name: check ipaddress is vaid or not
+      vars:
+        ip: "172.31.83.125"
+      ansible.builtin.debug:
+        msg: "{{ ip | ansible.utils.ipaddr }}"  
+      
